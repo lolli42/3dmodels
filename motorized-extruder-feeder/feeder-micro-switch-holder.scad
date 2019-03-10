@@ -28,7 +28,7 @@ difference() {
     cube([
         feederswitchX,
         feederswitchY,
-        feederswitchZ/2
+        feederswitchZ/2 // We're modelling one half of the thing, whole thing is 2 printed parts
     ]);
 
     // Cut out space for the switch itself
@@ -42,7 +42,7 @@ difference() {
         switchZ/2
     ]);
 
-    // Cut out space for pin-part of switch
+    // Cut out space for pin-side of switch
     translate([
         0,
         screwLatchY,
