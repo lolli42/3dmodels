@@ -117,22 +117,22 @@ module feederFilamentGuide() {
 
         // Extend inset at lower part so filament can't get stuck here
         translate([
-            guidanceMaterialThickness + guidanceScrewBaseX,
+            guidanceScrewBaseX,
             guidanceY - guidanceScrewBaseY,
             guidanceMaterialThickness,
         ]) cube([
-            guidanceX - 2*guidanceMaterialThickness - 2*guidanceScrewBaseX,
+            guidanceX - 2*guidanceScrewBaseX,
             guidanceScrewBaseY,
             guidanceZ - guidanceMaterialThickness
         ]);
 
         // Have a cut at top end
         translate([
-            guidanceMaterialThickness + guidanceScrewBaseX,
+            guidanceScrewBaseX,
             0,
             0,
         ]) cube([
-            guidanceX - 2*guidanceMaterialThickness - 2*guidanceScrewBaseX,
+            guidanceX - 2*guidanceScrewBaseX,
             guidanceScrewBaseY,
             guidanceZ
         ]);
