@@ -2,6 +2,7 @@ include <../primitives/prism.scad>;
 include <variables.scad>;
 
 // A model the micro switch for "need more filament" is embedded in
+// The model is one half, two are used
 module feederMicroSwitchHolder() {
     difference() {
         // Base material is a cube, everything else is substracted from it

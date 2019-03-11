@@ -29,3 +29,10 @@ echo(switchHolderZ = switchHolderZ);
 echo(switchHolderScrewDistanceX = switchHolderScrewDistanceX);
 echo(filamentFlowSpaceZ = filamentFlowSpaceZ);
 
+// Dimensions of the filament guidance
+guidanceMaterialThickness = 1.8;
+guidanceX = 2*guidanceMaterialThickness + 64;
+guidanceY = 99.1;
+guidanceZ = switchHolderZ + 2*guidanceMaterialThickness;
+guidanceScrewBaseX = 7;
+guidanceScrewBaseY = 7;
