@@ -8,7 +8,7 @@ latchX = 20; // Width of the part the filament runs through
 switchY = 20.2; // Height of the switch
 screwLatchY = 8; // Height of the part that holds the screws (two of them, one above, one below switch)
 
-screwHoleRadius = 1.55; // 3.1mm diameter -> M3
+screwHoleRadius = 1.65; // 3.3mm diameter -> M3 with a bit of space
 
 // Absolute dimension vars of the whole thing
 feederswitchX = 2*baseMaterialZ + switchX + latchX;
