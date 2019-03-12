@@ -1,3 +1,4 @@
+include <../primitives/prism.scad>;
 include <variables.scad>;
 
 // A base pod for holder screws
@@ -47,32 +48,32 @@ module feederFilamentGuide() {
         // Remove part the switch holder flows in
         translate([
             guidanceMaterialThickness,
-            74 - switchHolderY/2,
+            74 - switchHolderY/2 - 0.15,
             guidanceMaterialThickness,
         ]) cube([
             guidanceX - 2*guidanceMaterialThickness,
-            switchHolderY,
+            switchHolderY + 2*0.15, // 0.15 is some additional space around
             switchHolderBaseMaterialZ + switchHolderInsetZ
         ]);
 
         // Remove wide hole for horizontally adjustable switch holder upper row
         translate([
-            guidanceMaterialThickness + 8,
+            guidanceMaterialThickness + 5,
             74 - switchHolderY/2 + switchHolderScrewLatchY/2 - (screwHoleRadiusM2*2 + 0.2)/2,
             0
         ]) cube([
-            guidanceX - 2*guidanceMaterialThickness - 26 - 8,
+            guidanceX - 2*guidanceMaterialThickness - 10,
             screwHoleRadiusM2*2 + 0.2,
             guidanceMaterialThickness
         ]);
 
         // Remove wide hole for horizontally adjustable switch holder lower row
         translate([
-            guidanceMaterialThickness + 8,
+            guidanceMaterialThickness + 5,
             74 - switchHolderY/2 + switchHolderScrewLatchY/2 - (screwHoleRadiusM2*2 + 0.2)/2 + switchHolderScrewDistanceX,
             0
         ]) cube([
-            guidanceX - 2*guidanceMaterialThickness - 26 - 8,
+            guidanceX - 2*guidanceMaterialThickness - 10,
             screwHoleRadiusM2*2 + 0.2,
             guidanceMaterialThickness
         ]);
@@ -136,6 +137,21 @@ module feederFilamentGuide() {
             2* guidanceScrewBaseY,
             guidanceZ
         ]);
+
+        // Have a prism at top part for easier filament insert
+        translate([
+            guidanceScrewBaseX,
+            2*guidanceScrewBaseY + 2*(guidanceZ/2 - filamentFlowSpaceZ/2),
+            guidanceZ/2 - filamentFlowSpaceZ/2
+        ]) rotate([
+            180,
+            0,
+            0
+        ]) primitivePrism(
+            guidanceX - 2*guidanceScrewBaseX,
+            2*(guidanceZ/2 - filamentFlowSpaceZ/2),
+            guidanceZ/2 - filamentFlowSpaceZ/2
+        );
     };
 }
 
