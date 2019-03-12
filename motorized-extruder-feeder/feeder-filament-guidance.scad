@@ -116,6 +116,17 @@ module feederFilamentGuide() {
             $fn=64
         );
 
+        // Cut out space for micro switch wires
+        translate([
+            0,
+            74 - switchY/2 - 0.15,
+            guidanceMaterialThickness + switchHolderBaseMaterialZ
+        ]) cube([
+            guidanceMaterialThickness,
+            switchY,
+            switchHolderZ/2 - switchHolderBaseMaterialZ
+        ]);
+
         // Extend inset at lower part so filament can't get stuck here
         translate([
             guidanceScrewBaseX,
@@ -155,4 +166,6 @@ module feederFilamentGuide() {
     };
 }
 
-feederFilamentGuide();
+// Need two parts, they are not symmetric, so we need one native part and one mirror by x-achsis
+translate([1, 0, 0]) feederFilamentGuide();
+translate([-1, 0, 0]) mirror([1, 0, 0 ]) feederFilamentGuide();
