@@ -1,6 +1,7 @@
 // Radius an M3 screw hole has M3 screw fits in with a bit of extra space
 screwHoleRadiusM2 = 1.15; // 2.3 mm diameter
 screwHoleRadiusM3 = 1.65; // 3.3 mm diameter
+screwHoleRadiusM10 = 5.2; // 10.4 mm diameter
 
 // Dimensions of the micro switch, case only, without pins and switch latch
 switchZ = 6.6; // Thickness of switch
