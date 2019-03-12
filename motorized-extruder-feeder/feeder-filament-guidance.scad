@@ -14,7 +14,7 @@ module screwBase() {
             0
         ]) cylinder(
             h=guidanceZ/2,
-            r=screwHoleRadiusM3,
+            r=screwHoleRadiusM2,
             $fn=64
         );
     }
@@ -36,11 +36,11 @@ module feederFilamentGuide() {
         // Remove base inset
         translate([
             guidanceMaterialThickness,
-            guidanceScrewBaseY,
+            2*guidanceScrewBaseY,
             guidanceZ/2 - filamentFlowSpaceZ/2
         ]) cube([
             guidanceX - 2*guidanceMaterialThickness,
-            guidanceY - 2*guidanceScrewBaseY,
+            guidanceY - 3*guidanceScrewBaseY,
             filamentFlowSpaceZ/2
         ]);
 
@@ -58,22 +58,22 @@ module feederFilamentGuide() {
         // Remove wide hole for horizontally adjustable switch holder upper row
         translate([
             guidanceMaterialThickness + 8,
-            74 - switchHolderY/2 + switchHolderScrewLatchY/2 - (screwHoleRadiusM3*2 + 0.2)/2,
+            74 - switchHolderY/2 + switchHolderScrewLatchY/2 - (screwHoleRadiusM2*2 + 0.2)/2,
             0
         ]) cube([
             guidanceX - 2*guidanceMaterialThickness - 26 - 8,
-            screwHoleRadiusM3*2 + 0.2,
+            screwHoleRadiusM2*2 + 0.2,
             guidanceMaterialThickness
         ]);
 
         // Remove wide hole for horizontally adjustable switch holder lower row
         translate([
             guidanceMaterialThickness + 8,
-            74 - switchHolderY/2 + switchHolderScrewLatchY/2 - (screwHoleRadiusM3*2 + 0.2)/2 + switchHolderScrewDistanceX,
+            74 - switchHolderY/2 + switchHolderScrewLatchY/2 - (screwHoleRadiusM2*2 + 0.2)/2 + switchHolderScrewDistanceX,
             0
         ]) cube([
             guidanceX - 2*guidanceMaterialThickness - 26 - 8,
-            screwHoleRadiusM3*2 + 0.2,
+            screwHoleRadiusM2*2 + 0.2,
             guidanceMaterialThickness
         ]);
 
@@ -84,7 +84,7 @@ module feederFilamentGuide() {
             0
         ]) cylinder(
             h=guidanceZ/2,
-            r=screwHoleRadiusM3,
+            r=screwHoleRadiusM2,
             $fn=64
         );
         translate([
@@ -93,7 +93,7 @@ module feederFilamentGuide() {
             0
         ]) cylinder(
             h=guidanceZ/2,
-            r=screwHoleRadiusM3,
+            r=screwHoleRadiusM2,
             $fn=64
         );
         translate([
@@ -102,7 +102,7 @@ module feederFilamentGuide() {
             0
         ]) cylinder(
             h=guidanceZ/2,
-            r=screwHoleRadiusM3,
+            r=screwHoleRadiusM2,
             $fn=64
         );
         translate([
@@ -111,7 +111,7 @@ module feederFilamentGuide() {
             0
         ]) cylinder(
             h=guidanceZ/2,
-            r=screwHoleRadiusM3,
+            r=screwHoleRadiusM2,
             $fn=64
         );
 
@@ -126,14 +126,14 @@ module feederFilamentGuide() {
             guidanceZ - guidanceMaterialThickness
         ]);
 
-        // Have a cut at top end
+        // Have a cut at top end - enough for a wrench height
         translate([
             guidanceScrewBaseX,
             0,
             0,
         ]) cube([
             guidanceX - 2*guidanceScrewBaseX,
-            guidanceScrewBaseY,
+            2* guidanceScrewBaseY,
             guidanceZ
         ]);
     };

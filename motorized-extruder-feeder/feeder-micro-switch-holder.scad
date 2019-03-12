@@ -97,7 +97,7 @@ module feederMicroSwitchHolder() {
             0
         ]) cylinder(
             h=switchHolderZ/2,
-            r=screwHoleRadiusM3,
+            r=screwHoleRadiusM2,
             $fn=64
         );
 
@@ -108,7 +108,7 @@ module feederMicroSwitchHolder() {
             0
         ]) cylinder(
             h=switchHolderZ/2,
-            r=screwHoleRadiusM3,
+            r=screwHoleRadiusM2,
             $fn=64
         );
     }

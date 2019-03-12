@@ -1,4 +1,5 @@
 // Radius an M3 screw hole has M3 screw fits in with a bit of extra space
+screwHoleRadiusM2 = 1.15; // 2.3 mm diameter
 screwHoleRadiusM3 = 1.65; // 3.3 mm diameter
 
 // Dimensions of the micro switch, case only, without pins and switch latch
@@ -10,7 +11,7 @@ switchY = 20.2; // Height of switch
 switchHolderBaseMaterialZ = 1.6; // Basic material thickness. This is the smallest thickness at the switch
 switchHolderInsetZ = 1.2; // Inset thickness added to base thickness so switch can't fall out
 switchHolderLatchX = 20; // Width of the part the filament runs through
-switchHolderScrewLatchY = 8; // Height of the part that holds the screws (two of them, one above, one below switch)
+switchHolderScrewLatchY = 6; // Height of the part that holds the screws (two of them, one above, one below switch)
 
 // Absolute dimension vars of the whole micro switch holder, without the filament guide latches on top and bottom
 switchHolderX = 2*switchHolderBaseMaterialZ + switchX + switchHolderLatchX;
@@ -34,5 +35,5 @@ guidanceMaterialThickness = 1.8;
 guidanceX = 2*guidanceMaterialThickness + 64;
 guidanceY = 99.1;
 guidanceZ = switchHolderZ + 2*guidanceMaterialThickness;
-guidanceScrewBaseX = 7;
-guidanceScrewBaseY = 7;
+guidanceScrewBaseX = 6;
+guidanceScrewBaseY = 6;
