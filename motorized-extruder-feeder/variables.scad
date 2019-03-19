@@ -24,13 +24,6 @@ switchHolderScrewDistanceX = switchY + switchHolderScrewLatchY;
 // Thickness of the space the filament runs through
 filamentFlowSpaceZ = switchHolderZ - 2*switchHolderBaseMaterialZ - 2*switchHolderInsetZ;
 
-// Debug out final switch dimensions
-echo(switchHolderX = switchHolderX);
-echo(switchHolderY = switchHolderY);
-echo(switchHolderZ = switchHolderZ);
-echo(switchHolderScrewDistanceX = switchHolderScrewDistanceX);
-echo(filamentFlowSpaceZ = filamentFlowSpaceZ);
-
 // Dimensions of the filament guidance
 guidanceMaterialThickness = 1.8;
 guidanceX = 2*guidanceMaterialThickness + 64;
