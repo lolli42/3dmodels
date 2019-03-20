@@ -1,6 +1,6 @@
 
 materialThickness = 1.6;
-cutX = 20;
+cutX = 22;
 cutY = 8;
 cutZ = 50 + 2*materialThickness;
 latchOverHang = 5;
