@@ -1,3 +1,8 @@
+.PHONY: \
+	all \
+	raspi_case \
+	motorized_extruder_feeder
+
 all: \
 	raspi_case \
 	motorized_extruder_feeder
