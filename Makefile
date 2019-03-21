@@ -12,6 +12,8 @@ raspi_case:
 	openscad -o raspi_case/raspi-camera-hole.stl raspi_case/raspi-camera-hole.scad
 	openscad -o raspi_case/raspi-cable-hole.stl raspi_case/raspi-cable-hole.scad
 	openscad -o raspi_case/raspi-usb-hole.stl raspi_case/raspi-usb-hole.scad
+	openscad -o raspi_case/case.stl raspi_case/case.scad
+	openscad -o raspi_case/case-cover.stl raspi_case/case-cover.scad
 
 motorized_extruder_feeder:
 	openscad -o motorized_extruder_feeder/feeder-micro-switch-holder.stl motorized_extruder_feeder/feeder-micro-switch-holder.scad
