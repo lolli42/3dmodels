@@ -206,6 +206,16 @@ module case() {
                 20,
                 8
             ]);
+            // camera cable hole
+            translate([
+                4,
+                40.2,
+                - materialThickness
+            ]) cube([
+                23.6,
+                5.6,
+                materialThickness
+            ]);
         }
         // 4 lower latches
         translate([
@@ -252,4 +262,4 @@ module case() {
     }
 };
 
-case();
+mirror(0,1,0) case();
