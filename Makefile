@@ -12,6 +12,7 @@ raspi_case:
 	openscad -o raspi_case/raspi-camera-hole.stl raspi_case/raspi-camera-hole.scad
 	openscad -o raspi_case/raspi-cable-hole.stl raspi_case/raspi-cable-hole.scad
 	openscad -o raspi_case/raspi-usb-hole.stl raspi_case/raspi-usb-hole.scad
+	openscad -o raspi_case/power-hole.stl raspi_case/power-hole.scad
 	openscad -o raspi_case/case.stl raspi_case/case.scad
 	openscad -o raspi_case/case-cover.stl raspi_case/case-cover.scad
 
