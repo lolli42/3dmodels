@@ -15,6 +15,7 @@ raspi_case:
 	openscad -o raspi_case/power-hole.stl raspi_case/power-hole.scad
 	openscad -o raspi_case/case.stl raspi_case/case.scad
 	openscad -o raspi_case/case-cover.stl raspi_case/case-cover.scad
+	openscad -o raspi_case/power-plug-holder.stl raspi_case/power-plug-holder.scad
 
 motorized_extruder_feeder:
 	openscad -o motorized_extruder_feeder/feeder-micro-switch-holder.stl motorized_extruder_feeder/feeder-micro-switch-holder.scad

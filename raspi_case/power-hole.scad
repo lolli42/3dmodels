@@ -6,7 +6,7 @@ cutZ = 50 + 2*materialThickness;
 latchOverHang = 5;
 
 // Cut through ikea LACK for ender3 XT60 power connector hole
-module usbCableHole() {
+module powerCableHole() {
     difference() {
         union() {
             // base cube
@@ -39,4 +39,4 @@ module usbCableHole() {
     };
 }
 
-usbCableHole();
+powerCableHole();
