@@ -27,7 +27,7 @@ filamentFlowSpaceZ = switchHolderZ - 2*switchHolderBaseMaterialZ - 2*switchHolde
 // Dimensions of the filament guidance
 guidanceMaterialThickness = 1.8;
 guidanceX = 2*guidanceMaterialThickness + 64;
-guidanceY = 96.25;
+guidanceY = 75.25;
 guidanceZ = switchHolderZ + 2*guidanceMaterialThickness;
 guidanceScrewBaseX = 6;
 guidanceScrewBaseY = 6;
