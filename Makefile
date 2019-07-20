@@ -1,7 +1,8 @@
 .PHONY: \
 	all \
 	raspi_case \
-	motorized_extruder_feeder
+	motorized_extruder_feeder \
+	raspi_uni_enclosure
 
 all: \
 	raspi_case \
@@ -23,4 +24,4 @@ motorized_extruder_feeder:
 	openscad -o motorized_extruder_feeder/feeder-lower-blanket-holder.stl motorized_extruder_feeder/feeder-lower-blanket-holder.scad
 
 raspi_uni_enclosure:
-	openscad -o raspi_uni_enclosure/raspi-uni-enclosure.str raspi_uni_enclosure/raspi-uni-enclosure.scad
+	openscad -o raspi_uni_enclosure/raspi-uni-enclosure.stl raspi_uni_enclosure/raspi-uni-enclosure.scad
