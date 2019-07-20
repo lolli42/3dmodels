@@ -1,13 +1,14 @@
-mainCaseX = 96;
-mainCaseY = 74;
+mainCaseX = 92;
+mainCaseY = 69;
 mainCaseZ = 1.6;
 
 raspiY = 56;
 raspiX = 85;
 
-sdCardSpaceX = 12;
+sdCardSpaceX = 8;
 sdCardSpaceY = 26;
-sdCardBlockX = 10;
+sdCardBlockX = 6;
+sdCardBlockY = 12;
 
 raspiFootDistanceX = 58;
 raspiFootDistanceY = 49;
@@ -83,11 +84,11 @@ module case() {
         // Blocks next to sdcard
         translate([
             0,
-            0,
+            mainCaseY / 2 - sdCardSpaceY / 2 - sdCardBlockY,
             mainCaseZ
         ]) cube([
             sdCardBlockX,
-            (mainCaseY - sdCardSpaceY) / 2,
+            sdCardBlockY,
             10
         ]);
 
@@ -98,7 +99,7 @@ module case() {
             mainCaseZ
         ]) cube([
             sdCardBlockX,
-            (mainCaseY - sdCardSpaceY) / 2,
+            sdCardBlockY,
             10
         ]);
 
