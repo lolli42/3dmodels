@@ -2,11 +2,8 @@
 	all \
 	raspi_case \
 	motorized_extruder_feeder \
-	raspi_uni_enclosure
-
-all: \
-	raspi_case \
-	motorized_extruder_feeder
+	raspi_uni_enclosure \
+	t_rex
 
 raspi_case:
 	openscad -o raspi_case/panel.stl raspi_case/panel.scad
@@ -25,3 +22,6 @@ motorized_extruder_feeder:
 
 raspi_uni_enclosure:
 	openscad -o raspi_uni_enclosure/raspi-uni-enclosure.stl raspi_uni_enclosure/raspi-uni-enclosure.scad
+
+t_rex:
+	openscad -o t_rex/base-beam-short.stl t_rex/base-beam-short.scad
